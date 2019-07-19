@@ -19,10 +19,13 @@ function CharCard (props) {
     `;
     const CardImg = styled.img`
         width: 100%;
+        height: auto;
         margin: .5rem;
         border-radius: .3rem;
         border: 1px solid #C8C8C8;
         box-shadow: 2px 2px 10px grey;
+        object-fit: cover;
+        background-color: #272B30;
     `;
 
     const StatsDiv = styled.div`
@@ -46,7 +49,6 @@ function CharCard (props) {
         font-weight: 400;
     `;
 
-    console.log(props.stats)
     let stats = props.stats;
     return (
         <Card>
