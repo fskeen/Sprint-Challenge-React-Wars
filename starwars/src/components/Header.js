@@ -14,7 +14,8 @@ function Header () {
         outline-offset: -3px;
         position: sticky;
         top: 0px;
-        box-shadow: 0 0 5px #0e0f11;;
+        box-shadow: 0 0 5px #0e0f11;
+        z-index: 2;
 
     `;
     const HeaderImg = styled.img`

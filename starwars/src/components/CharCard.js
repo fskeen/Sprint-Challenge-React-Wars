@@ -16,6 +16,15 @@ function CharCard (props) {
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            background-color: rgba(255,255,255,.35);
+            transition: transform .2s ease;
+            cursor: pointer;
+
+        }
     `;
     const CardImg = styled.img`
         width: 100%;
@@ -55,7 +64,7 @@ function CharCard (props) {
             <CardImg src={stats.img}></CardImg>
             <Name>{stats.name}</Name>
             <StatsDiv>
-                <Stat>Height: {stats.height}</Stat>
+                <Stat>Height: {stats.height} cm</Stat>
                 <Stat>Mass: {stats.mass}</Stat>
                 <Stat>Birth year: {stats.birth_year}</Stat>
                 <Stat>Homeworld: {stats.homeworld === "https://swapi.co/api/planets/1/" ? "Tatooine" :

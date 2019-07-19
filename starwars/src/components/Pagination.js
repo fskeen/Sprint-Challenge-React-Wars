@@ -24,11 +24,15 @@ function Pagination (props) {
         justify-content: center;
         width: 10rem;
         cursor: pointer;
+        transition: transform .3s ease;
+
 
         &:hover {
             box-shadow: 0 0 3px white;
             color: rgb(219, 180, 49);
             background-color: black;
+            transform: scale(1.03);
+            transition: transform .2s ease;
         }
     `;
 

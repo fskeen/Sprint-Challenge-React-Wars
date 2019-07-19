@@ -28,12 +28,12 @@ const App = () => {
     if (page === 3) {
       return
     }
-    
     return setPage(page + 1)
   }
 
   const [charArray, setCharArray] = useState([]) ;
   const [page, setPage] = useState(1)
+  
   useEffect( () => {
     axios.get(`https://henry-mock-swapi.herokuapp.com/api?page=${page}`)
       .then((res) => {
