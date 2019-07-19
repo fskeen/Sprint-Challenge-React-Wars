@@ -4,10 +4,10 @@ import styled from 'styled-components'
 function CharCard (props) {
 
     const Card = styled.div`
-        background-color: rgba(255,255,255,.75);
+        background-color: rgba(255,255,255,.25);
         border-radius: .3rem;
         border: 1px solid #C8C8C8;
-        box-shadow: 2px 2px 2px grey;
+        box-shadow: 2px 2px 2px black;
         padding: 1rem;
         padding-right: 2rem;
         max-width: 30rem;
@@ -22,7 +22,7 @@ function CharCard (props) {
         margin: .5rem;
         border-radius: .3rem;
         border: 1px solid #C8C8C8;
-        box-shadow: 2px 2px 10px #D3D3D3;
+        box-shadow: 2px 2px 10px grey;
     `;
 
     const StatsDiv = styled.div`
@@ -30,10 +30,20 @@ function CharCard (props) {
         padding: 0;
     `;
 
+    const Name = styled.h2`
+        font-family: "Squada One";
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+    `;
+
     const Stat = styled.h4`
         margin: 0;
         line-height: auto;
         text-align: left;
+        color: white;
+        font-family: "Source Sans Pro";
+        font-weight: 400;
     `;
 
     console.log(props.stats)
@@ -41,12 +51,14 @@ function CharCard (props) {
     return (
         <Card>
             <CardImg src={stats.img}></CardImg>
-            <h2>{stats.name}</h2>
+            <Name>{stats.name}</Name>
             <StatsDiv>
                 <Stat>Height: {stats.height}</Stat>
                 <Stat>Mass: {stats.mass}</Stat>
                 <Stat>Birth year: {stats.birth_year}</Stat>
-                <Stat>Homeworld: {stats.homeworld}</Stat>
+                <Stat>Homeworld: {stats.homeworld === "https://swapi.co/api/planets/1/" ? "Tatooine" :
+                stats.homeworld === "https://swapi.co/api/planets/8/" ? "Naboo" :    
+                stats.homeworld === "https://swapi.co/api/planets/2/" ? "Alderaan" : "Stewjon"} </Stat>
             </StatsDiv>
         </Card>
     )

@@ -6,6 +6,7 @@ function CardContainer (props) {
     const Container = styled.div`
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     `;
 
     const imgs = [
@@ -57,7 +58,7 @@ function CardContainer (props) {
                     a.name === imgs[6].name ? a.img = imgs[6].src :
                     a.name === imgs[7].name ? a.img = imgs[7].src :
                     a.name === imgs[8].name ? a.img = imgs[8].src : a.img = imgs[9].src }
-                    
+
             return <CharCard key={a.name} stats={a}/>
         })
         : <p>Loading...</p>}

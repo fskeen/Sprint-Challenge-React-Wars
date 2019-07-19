@@ -9,14 +9,14 @@ function Footer () {
         background-size: 10rem;
         height: 1rem;
         padding: 1rem;
-        outline: 1px solid yellow;
+        outline: 1px solid rgb(219, 180, 49);
         outline-offset: -4px;
     `;
 
     const FooterP = styled.p`
         font-family: "Squada One";
         font-weight: 400;
-        color: yellow;
+        color: rgb(219, 180, 49);
         margin: 0;
     `;
 

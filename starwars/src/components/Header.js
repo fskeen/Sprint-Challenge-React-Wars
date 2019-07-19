@@ -9,7 +9,7 @@ function Header () {
         background-image: url("https://i.imgur.com/WQx5L19.gif");
         background-size: 10rem;
         height: 4rem;
-        outline: 1px solid yellow;
+        outline: 1px solid rgb(219, 180, 49);
         outline-offset: -3px;
         position: sticky;
         top: 0px;
